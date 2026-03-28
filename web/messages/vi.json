@@ -1,0 +1,89 @@
+{
+  "app": {
+    "name": "Lingua AI Studio",
+    "tagline": "Không gian AI song ngữ cho đội ngũ sản phẩm hiện đại"
+  },
+  "meta": {
+    "title": "Lingua AI Studio",
+    "description": "Ứng dụng AI đa ngôn ngữ sẵn sàng production với Next.js, NestJS, MongoDB Atlas và xác thực JWT."
+  },
+  "nav": {
+    "home": "Trang chủ",
+    "chat": "Trò chuyện",
+    "login": "Đăng nhập",
+    "register": "Đăng ký",
+    "logout": "Đăng xuất",
+    "theme": "Giao diện",
+    "light": "Sáng",
+    "dark": "Tối",
+    "workspace": "Không gian làm việc",
+    "statusOnline": "API đang kết nối"
+  },
+  "language": {
+    "switch": "Chuyển ngôn ngữ",
+    "vi": "Tiếng Việt",
+    "en": "Tiếng Anh"
+  },
+  "auth": {
+    "login": "Đăng nhập",
+    "register": "Đăng ký",
+    "email": "Email",
+    "password": "Mật khẩu",
+    "logout": "Đăng xuất",
+    "loginTitle": "Chào mừng quay lại",
+    "loginDescription": "Đăng nhập để tiếp tục không gian AI đa ngôn ngữ của bạn.",
+    "registerTitle": "Tạo tài khoản mới",
+    "registerDescription": "Bắt đầu các cuộc trò chuyện AI tiếng Việt và tiếng Anh một cách an toàn chỉ trong vài phút.",
+    "submitLogin": "Đăng nhập",
+    "submitRegister": "Tạo tài khoản",
+    "switchToRegister": "Chưa có tài khoản?",
+    "switchToLogin": "Đã có tài khoản?",
+    "sessionExpired": "Phiên đăng nhập đã hết hạn. Vui lòng đăng nhập lại."
+  },
+  "chat": {
+    "send": "Gửi",
+    "placeholder": "Nhập tin nhắn...",
+    "thinking": "AI đang suy nghĩ...",
+    "history": "Lịch sử trò chuyện",
+    "title": "Không gian hội thoại",
+    "subtitle": "Lưu trữ cuộc trò chuyện, phản hồi song ngữ và lịch sử gắn với tài khoản.",
+    "new": "Cuộc trò chuyện mới",
+    "emptyTitle": "Bắt đầu ý tưởng tiếp theo tại đây",
+    "emptyDescription": "Hỏi về chiến lược, code, nội dung, dịch thuật hoặc lập kế hoạch. Mọi cuộc trò chuyện đều được lưu vào tài khoản của bạn.",
+    "startFresh": "Bắt đầu mới",
+    "noConversations": "Chưa có cuộc trò chuyện nào được lưu.",
+    "loadError": "Không thể tải lịch sử trò chuyện lúc này.",
+    "sendError": "Không thể gửi tin nhắn. Vui lòng thử lại.",
+    "composerHint": "Nhấn Enter để gửi, Shift + Enter để xuống dòng.",
+    "guardTitle": "Đang kiểm tra phiên đăng nhập an toàn",
+    "guardDescription": "Đang chuẩn bị lịch sử hội thoại và xác thực token của bạn.",
+    "retry": "Thử lại",
+    "connected": "Đã kết nối",
+    "continue": "Tiếp tục hội thoại",
+    "welcome": "Hôm nay bạn muốn AI hỗ trợ điều gì?",
+    "welcomeDescription": "Không gian này lưu từng cuộc trao đổi để bạn có thể tiếp tục, tìm lại và sử dụng lại ở các lần sau."
+  },
+  "home": {
+    "eyebrow": "Nền tảng AI đa ngôn ngữ sẵn sàng production",
+    "title": "Triển khai trải nghiệm AI song ngữ bảo mật với kiến trúc sạch.",
+    "description": "Starter này kết hợp Next.js App Router, NestJS, MongoDB Atlas, JWT auth và OpenAI thành một ứng dụng web tiếng Việt/tiếng Anh có thể triển khai ngay.",
+    "primaryCta": "Mở trò chuyện",
+    "secondaryCta": "Tạo tài khoản",
+    "featureOneTitle": "Định tuyến ưu tiên locale",
+    "featureOneDescription": "Mọi trang quan trọng đều có sẵn dưới /vi và /en với thông điệp và điều hướng do next-intl quản lý.",
+    "featureTwoTitle": "Xác thực JWT",
+    "featureTwoDescription": "Đăng ký, đăng nhập, bảo vệ route riêng tư và duy trì phiên qua localStorage kết hợp proxy guard.",
+    "featureThreeTitle": "AI chat lưu lịch sử",
+    "featureThreeDescription": "Lưu từng cuộc trò chuyện, mở lại toàn bộ lịch sử và tiếp tục trao đổi với phản hồi từ OpenAI."
+  },
+  "errors": {
+    "generic": "Đã xảy ra lỗi. Vui lòng thử lại.",
+    "network": "Không thể kết nối tới dịch vụ backend. Hãy kiểm tra API URL và thử lại.",
+    "notFoundTitle": "Không tìm thấy trang",
+    "notFoundDescription": "Trang bạn yêu cầu không tồn tại hoặc không còn khả dụng.",
+    "backHome": "Quay về trang chủ",
+    "errorTitle": "Ứng dụng gặp lỗi bất ngờ",
+    "errorDescription": "Hãy tải lại trang hoặc thử lại sau ít phút.",
+    "missingApi": "Chưa cấu hình NEXT_PUBLIC_API_URL."
+  }
+}

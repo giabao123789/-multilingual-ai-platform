@@ -1,0 +1,14 @@
+{
+  "name": "multilingual-ai-platform",
+  "private": true,
+  "scripts": {
+    "dev:api": "npm --prefix api run start:dev",
+    "dev:web": "npm --prefix web run dev",
+    "build:api": "npm --prefix api run build",
+    "build:web": "npm --prefix web run build",
+    "build": "npm --prefix api run build && npm --prefix web run build",
+    "lint:web": "npm --prefix web run lint",
+    "test:api": "npm --prefix api test -- --runInBand",
+    "test:api:e2e": "npm --prefix api run test:e2e -- --runInBand"
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "app": {
+    "name": "Lingua AI Studio",
+    "tagline": "Bilingual AI workspace for modern product teams"
+  },
+  "meta": {
+    "title": "Lingua AI Studio",
+    "description": "Production-ready multilingual AI chat app built with Next.js, NestJS, MongoDB Atlas, and JWT authentication."
+  },
+  "nav": {
+    "home": "Home",
+    "chat": "Chat",
+    "login": "Login",
+    "register": "Register",
+    "logout": "Logout",
+    "theme": "Theme",
+    "light": "Light",
+    "dark": "Dark",
+    "workspace": "Workspace",
+    "statusOnline": "API connected"
+  },
+  "language": {
+    "switch": "Switch language",
+    "vi": "Vietnamese",
+    "en": "English"
+  },
+  "auth": {
+    "login": "Login",
+    "register": "Register",
+    "email": "Email",
+    "password": "Password",
+    "logout": "Logout",
+    "loginTitle": "Welcome back",
+    "loginDescription": "Sign in to continue your multilingual AI workspace.",
+    "registerTitle": "Create your account",
+    "registerDescription": "Start secure Vietnamese and English AI conversations in minutes.",
+    "submitLogin": "Sign in",
+    "submitRegister": "Create account",
+    "switchToRegister": "Need an account?",
+    "switchToLogin": "Already have an account?",
+    "sessionExpired": "Your session expired. Please sign in again."
+  },
+  "chat": {
+    "send": "Send",
+    "placeholder": "Type a message...",
+    "thinking": "AI is thinking...",
+    "history": "Chat History",
+    "title": "Conversation workspace",
+    "subtitle": "Persistent chats, bilingual answers, and a secure account-backed history.",
+    "new": "New chat",
+    "emptyTitle": "Start the next idea here",
+    "emptyDescription": "Ask for strategy, code, copy, translations, or planning. Every conversation is saved to your account.",
+    "startFresh": "Start fresh",
+    "noConversations": "No saved chats yet.",
+    "loadError": "Unable to load chat history right now.",
+    "sendError": "Unable to send the message. Please try again.",
+    "composerHint": "Press Enter to send, Shift + Enter for a new line.",
+    "guardTitle": "Checking your secure session",
+    "guardDescription": "Preparing your conversation history and verifying your token.",
+    "retry": "Retry",
+    "connected": "Connected",
+    "continue": "Continue conversation",
+    "welcome": "What do you want the AI to help with today?",
+    "welcomeDescription": "This workspace keeps each discussion organized, searchable, and available across sessions."
+  },
+  "home": {
+    "eyebrow": "Production-ready multilingual AI stack",
+    "title": "Launch a secure bilingual AI experience with clean architecture.",
+    "description": "This starter pairs Next.js App Router, NestJS, MongoDB Atlas, JWT auth, and OpenAI into a deployable Vietnamese/English web app.",
+    "primaryCta": "Open chat",
+    "secondaryCta": "Create account",
+    "featureOneTitle": "Locale-first routing",
+    "featureOneDescription": "Every key page is available under /vi and /en with next-intl-driven messages and navigation.",
+    "featureTwoTitle": "JWT authentication",
+    "featureTwoDescription": "Register, sign in, protect private routes, and persist identity across reloads with local storage plus proxy guards.",
+    "featureThreeTitle": "Persistent AI chat",
+    "featureThreeDescription": "Save each conversation, reopen the full history, and continue chatting with OpenAI-backed replies."
+  },
+  "errors": {
+    "generic": "Something went wrong. Please try again.",
+    "network": "Unable to reach the backend service. Check the API URL and try again.",
+    "notFoundTitle": "Page not found",
+    "notFoundDescription": "The page you requested does not exist or is no longer available.",
+    "backHome": "Back to home",
+    "errorTitle": "Unexpected application error",
+    "errorDescription": "Refresh the page or try again in a moment.",
+    "missingApi": "NEXT_PUBLIC_API_URL is not configured."
+  }
+}
