@@ -2,12 +2,7 @@
 
 Production-ready multilingual AI chat app built with Next.js App Router, NestJS, MongoDB Atlas, JWT auth, and OpenAI.
 
-## Demo
 
-- Frontend URL: add your Vercel production URL after deployment
-- Backend URL: add your Render production URL after deployment
-
-This environment did not include connected Render/Vercel project access, so the live deployment step was prepared but not executed here.
 
 ## Features
 
