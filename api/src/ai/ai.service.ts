@@ -1,6 +1,12 @@
-import { BadGatewayException, Injectable } from '@nestjs/common';
+import { BadGatewayException, Injectable, Logger } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
-import OpenAI from 'openai';
+import OpenAI, {
+  APIConnectionError,
+  APIError,
+  AuthenticationError,
+  PermissionDeniedError,
+  RateLimitError,
+} from 'openai';
 
 interface AiMessage {
   role: 'user' | 'assistant';
@@ -15,6 +21,7 @@ interface GenerateReplyInput {
 
 @Injectable()
 export class AiService {
+  private readonly logger = new Logger(AiService.name);
   private client: OpenAI | null = null;
 
   constructor(private readonly configService: ConfigService) {}
@@ -49,8 +56,62 @@ export class AiService {
         throw error;
       }
 
-      throw new BadGatewayException('AI service is temporarily unavailable.');
+      this.logger.error('OpenAI request failed', this.formatErrorForLog(error));
+      throw new BadGatewayException(this.resolveUserMessage(error));
     }
+  }
+
+  private resolveUserMessage(error: unknown): string {
+    if (error instanceof AuthenticationError) {
+      return 'OpenAI API key is invalid. Check OPENAI_API_KEY on the server.';
+    }
+
+    if (error instanceof PermissionDeniedError) {
+      return 'OpenAI access denied. Verify billing and project permissions.';
+    }
+
+    if (error instanceof RateLimitError) {
+      return 'OpenAI rate limit or quota exceeded. Try again later or check billing.';
+    }
+
+    if (error instanceof APIConnectionError) {
+      return 'Cannot reach OpenAI. Check network connectivity on the server.';
+    }
+
+    if (error instanceof APIError) {
+      const model = this.configService.get<string>('OPENAI_MODEL') ?? 'gpt-4o-mini';
+
+      if (error.status === 404) {
+        return `OpenAI model "${model}" was not found. Check OPENAI_MODEL.`;
+      }
+
+      if (error.message) {
+        return `OpenAI error: ${error.message}`;
+      }
+    }
+
+    if (error instanceof Error && error.message) {
+      return `AI service error: ${error.message}`;
+    }
+
+    return 'AI service is temporarily unavailable.';
+  }
+
+  private formatErrorForLog(error: unknown) {
+    if (error instanceof APIError) {
+      return {
+        status: error.status,
+        message: error.message,
+        code: error.code,
+        type: error.type,
+      };
+    }
+
+    if (error instanceof Error) {
+      return { message: error.message, name: error.name };
+    }
+
+    return { error };
   }
 
   private getClient() {
