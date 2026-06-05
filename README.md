@@ -29,16 +29,7 @@ multilingual-ai-platform/
 └─ README.md
 ```
 
-## Screenshots
 
-Screenshot capture was not completed in this environment. After deployment, add current UI captures under `docs/screenshots/` and reference them here.
-
-Suggested captures:
-
-- `docs/screenshots/home-en.png`
-- `docs/screenshots/login-en.png`
-- `docs/screenshots/register-en.png`
-- `docs/screenshots/chat-en.png`
 
 ## Environment variables
 
